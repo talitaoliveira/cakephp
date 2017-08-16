@@ -4,7 +4,7 @@ class UsersController extends AppController {
 
 	public function beforeFilter(){
 		parent::beforeFilter();
-		$this->Auth->allow('login', 'logout', 'index');
+		//$this->Auth->allow('login', 'logout', 'index');
 	}
 
 	public function index () {
@@ -70,9 +70,9 @@ class UsersController extends AppController {
 	public function login() {
 
 		if ($this->request->is('post')) {
-			debug($this->Auth->login()); die();
+			//debug($this->Auth->login()); die();
 			if ($this->Auth->login()) {
-				die("aqui");
+				//die("aqui");
 				$this->redirect($this->Auth->redirect());
 			}
 			

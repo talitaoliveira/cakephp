@@ -35,8 +35,11 @@ class AppController extends Controller {
     public $components = array(
         'Flash',
         'Auth' => array(
+            'loginAction' => array('controller' => 'users', 'action' => 'login'),
             'loginRedirect' => array('controller' => 'users', 'action' => 'index'),
-            'logoutRedirect' => array('controller' => 'users', 'action' => 'login'),
+            'authenticate' => array(
+                'Form' 
+            )
         )
     );
 
